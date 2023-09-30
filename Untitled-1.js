@@ -195,7 +195,7 @@
         <div class="saveDetails" style="color: #4caf50;">${
           item.update ? new Date(item.update).toLocaleString() : ''
         }</div>
-        <input class="deleteButton" type="button" value="删除" onclick="confirm('确定删除此备份？')&&c0e8ccb0_delete(event.target.parentElement.parentElement.getAttribute('saveName'));" ${
+        <input class="deleteButton" type="button" value="删除" onclick="confirm('# ${index}\n确定删除此备份？')&&c0e8ccb0_delete(event.target.parentElement.parentElement.getAttribute('saveName'));" ${
           item.had ? '' : 'disabled=""'
         }">
       </div>
