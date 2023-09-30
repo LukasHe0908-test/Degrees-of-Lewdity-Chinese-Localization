@@ -1,9 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-process.env.WORK_FOLDER_PATH = path.resolve(__dirname, './');
-process.env.BUILD_FOLDER_PATH = path.resolve(__dirname, './');
-
 console.log(process.env.WORK_FOLDER_PATH, process.env.BUILD_FOLDER_PATH);
 
 const file = fs
