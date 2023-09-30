@@ -1,6 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
+process.env.WORK_FOLDER_PATH = './';
+process.env.BUILD_FOLDER_PATH = './';
+
 console.log(process.env.WORK_FOLDER_PATH, process.env.BUILD_FOLDER_PATH);
 
 const file = fs
@@ -10,6 +13,8 @@ const file = fs
 
 const cspMetaRegex = /<meta[^\<]*?["']Content-Security-Policy["'][^\>]*?>/is;
 const insertRegex = /list\.lastChild\.append\("[^"]*?indexedDB"\);/i;
+const insertRegex_already =
+  /(?<=list\.lastChild\.append\("[^"]*?indexedDB"\);)\/\/ start-mark-c0e8ccb0(.*)\/\/ end-mark-c0e8ccb0/is;
 
 (async () => {
   let text = fs
@@ -19,7 +24,11 @@ const insertRegex = /list\.lastChild\.append\("[^"]*?indexedDB"\);/i;
     console.log('replace cspMeta');
     text = text.replace(cspMetaRegex, '');
   }
-  if (insertRegex.test(text) && !/id=\"c0e8ccb0\"/i.test(text)) {
+  if (insertRegex.test(text) && !text.includes(file)) {
+    if (insertRegex_already.test(text)) {
+      console.log('replace insert_already');
+      text = text.replace(insertRegex_already, '');
+    }
     console.log('replace insert');
     text = text.replace(insertRegex, '$&' + file);
   }
