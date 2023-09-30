@@ -11,7 +11,7 @@ const file = fs
 const cspMetaRegex = /<meta[^\<]*?["']Content-Security-Policy["'][^\>]*?>/is;
 const insertRegex = /list\.lastChild\.append\("[^"]*?indexedDB"\);/i;
 const insertRegex_already =
-  /(?<=list\.lastChild\.append\("[^"]*?indexedDB"\);)\(\(\).*?}\)\(\);(\n*)/is;
+  /(?<=list\.lastChild\.append\("[^"]*?indexedDB"\);)\/\/ start-mark-c0e8ccb0(.*)\/\/ end-mark-c0e8ccb0(\n*)/is;
 
 (async () => {
   let text = fs
