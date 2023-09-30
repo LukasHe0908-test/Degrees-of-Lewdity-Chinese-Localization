@@ -1,0 +1,101 @@
+<div id="c0e8ccb0">
+  <style>
+    #c0e8ccb0 {
+      display: block;
+      padding: 8px;
+      margin: 8px;
+      border-radius: 8px;
+      border: 1px #fff solid;
+      box-sizing: border-box;
+    }
+    #c0e8ccb0 button {
+      display: block;
+      border: 1px solid #8ab4f8;
+      border-radius: 4px;
+      color: #8ab4f8;
+      background-color: transparent;
+      margin: 4px;
+      padding: 8px 16px;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+    #c0e8ccb0 button:hover {
+      background-color: rgba(112, 112, 112, 0.3);
+    }
+    #c0e8ccb0 span.explain {
+      display: block;
+      line-height: 100%;
+      font-size: 1rem;
+      margin-bottom: 4px;
+      user-select: none;
+    }
+    #c0e8ccb0 .savesList {
+      display: block;
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px #fff solid;
+      box-sizing: border-box;
+    }
+    #c0e8ccb0 .savesList .savesListRow {
+      max-height: 7em;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+    #c0e8ccb0 .savesList .savesListRow:not(:last-child) {
+      border-bottom: 1px solid gray;
+    }
+    #c0e8ccb0 .savesList .savesListRow .saveGroup {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      flex-grow: 1;
+      flex-shrink: 1;
+      min-width: 0;
+      padding: 4px 0;
+    }
+    #c0e8ccb0 .savesList .savesListRow .saveGroup > * {
+      display: flex;
+      justify-content: center;
+      /* margin: 0 10px; */
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+    #c0e8ccb0 .savesList .savesListRow .saveId {
+      min-width: 2em;
+      margin-left: 4px;
+      margin-right: -6px;
+    }
+    #c0e8ccb0 .savesList .savesListRow .saveButton {
+      display: flex;
+      justify-content: center;
+      min-width: 110px;
+      margin: 0 10px;
+    }
+    #c0e8ccb0 .savesList .savesListRow .saveName {
+      width: 80px;
+    }
+    #c0e8ccb0 .savesList .savesListRow .saveDetails {
+      display: flex;
+      flex: 1 1 0;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: stretch;
+      min-width: 100px;
+    }
+    #c0e8ccb0 .savesList .savesListRow .deleteButton {
+      float: right;
+    }
+    #c0e8ccb0 .savesList .savesListRow input:not(:disabled) {
+      background-color: #4372FF;
+    }
+  </style>
+  <span class="explain" style="font-size: 1.5rem">云备份</span>
+  <span class="explain" style="margin-bottom: 8px">
+    (此为备份浏览器存储) 服务密钥:
+    <span style="color: #4caf50">************************************</span>
+  </span>
+  <button onclick="c0e8ccb0_getlist()">重新获取列表</button>
+  <div class="savesList"></div>
+</div>
