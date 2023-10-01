@@ -196,8 +196,8 @@
           item.update ? new Date(item.update).toLocaleString() : ''
         }</div>
         <input class="deleteButton" type="button" value="删除" onclick="confirm('# ${index}\u005c\u006e确定删除此备份？')&&c0e8ccb0_delete(event.target.parentElement.parentElement.getAttribute('saveName'));" ${
-          item.had ? '' : 'disabled=""'
-        }">
+        item.had ? '' : 'disabled=""'
+      }">
       </div>
     </div>`;
       listRow.firstElementChild.setAttribute('had', item.had);
@@ -320,8 +320,8 @@
     console.log(result);
     c0e8ccb0_getlist();
   }
-  async function c0e8ccb0_load(url) {
-    console.log('Loading', url);
+  async function c0e8ccb0_load(url, use_proxy = true) {
+    console.log('Loading', url, '(' + (use_proxy ? '' : 'not ') + 'use proxy)');
     const input = await (
       await fetch('https://oss.lukas1.eu.org/getFile/' + url)
     ).json();
