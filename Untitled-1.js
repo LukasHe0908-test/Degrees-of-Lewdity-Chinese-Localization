@@ -323,7 +323,7 @@
   async function c0e8ccb0_load(url, use_proxy = true) {
     console.log('Loading', url, '(' + (use_proxy ? '' : 'not ') + 'use proxy)');
     const input = await (
-      await fetch(use_proxy ? 'https://oss.lukas1.eu.org/getFile/' : '' + url)
+      await fetch((use_proxy ? 'https://oss.lukas1.eu.org/getFile/' : '') + url)
     ).json();
     console.log(input);
 
