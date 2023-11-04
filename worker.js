@@ -9,9 +9,10 @@ const file = fs
 // console.log(file);
 
 const cspMetaRegex = /<meta[^\<]*?["']Content-Security-Policy["'][^\>]*?>/is;
-const insertRegex = /list\.lastChild\.append\("[^"]*?indexedDB"\);/i;
+const insertRegex =
+  /list\.lastChild\.append\(idbToggle\),list\.lastChild\.append\("([^"]*)"\),/i;
 const insertRegex_already =
-  /(?<=list\.lastChild\.append\("[^"]*?indexedDB"\);)\/\/ start-mark-c0e8ccb0(.*)\/\/ end-mark-c0e8ccb0(\n*)/is;
+  /\/\/ start-mark-c0e8ccb0(.*)\/\/ end-mark-c0e8ccb0(\n*)/is;
 
 (async () => {
   let text = fs
