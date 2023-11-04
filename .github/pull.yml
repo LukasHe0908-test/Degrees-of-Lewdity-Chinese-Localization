@@ -2,5 +2,5 @@ version: "1"
 rules:
   - base: gh-pages
     upstream: Eltirosto:gh-pages    # change `wei` to the owner of upstream repo
-    mergeMethod: none
+    mergeMethod: rebase
     mergeUnstable: true
