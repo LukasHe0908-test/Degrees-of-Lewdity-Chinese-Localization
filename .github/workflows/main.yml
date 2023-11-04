@@ -28,7 +28,7 @@ jobs:
           path: ${{ env.BUILD_FOLDER_PATH }}
 
       - name: Setup Node.js
-        uses: actions/setup-node@v32
+        uses: actions/setup-node@v3
         with:
           node-version: '18'
 
