@@ -20,8 +20,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          ref: netlify-pages
+          ref: gh-pages
           path: ${{ env.BUILD_FOLDER_PATH }}
+          
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
