@@ -2,7 +2,7 @@ name: Sync Fork
 
 on:
   schedule:
-    - cron: '0 */2 * * *' # every 2 hours
+    - cron: '0 */12 * * *' # every 12 hours
   workflow_dispatch:
 
 env:
@@ -14,18 +14,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
+        # checkout the code
         uses: actions/checkout@v4
         with:
           path: ${{ env.WORK_FOLDER_PATH }}
-      - name: Checkout code
+      - name: Checkout code from upstream
+        # checkout from upstream
         uses: actions/checkout@v4
         with:
+          # upstream author/name
+          repository: Eltirosto/Degrees-of-Lewdity-Chinese-Localization
           ref: gh-pages
           path: ${{ env.BUILD_FOLDER_PATH }}
-          
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v32
         with:
           node-version: '18'
 
