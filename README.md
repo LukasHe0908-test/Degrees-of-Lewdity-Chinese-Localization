@@ -109,6 +109,12 @@
 <details>
 <summary>点击展开</summary>
 
+> 2023.11.11
+> - 发布 `dol-0.4.3.3-chs-alpha2.1.2` 版
+>   - 修复了惠特尼霸凌孤儿时出现的问题 [@issue/189][issue189]
+>   - 进一步修复了汉化脚本的问题 [@issue/190][issue190]
+>   - 修复了悉尼堕落线文本错字 [@issue/191][issue191]
+> 
 > 2023.11.10
 > - 发布 `dol-0.4.3.3-chs-alpha2.1.1` 版
 >   - 修复了汉化脚本的问题 [@issue/186][issue186] [@issue/187][issue187]
@@ -122,6 +128,7 @@
 >   - 改进了悉尼柜台奶昔互动文本 [@issue/176][issue176]
 >   - 修复了拒绝交钱时贝利台词 [@issue/178][issue178]
 >   - 修复了查里工作部分选项文本 [@issue/181][issue181]
+>   - 修复了罗宾首次纳入文本错误 [@issue/183][issue183]
 >   - 修复了艾利克斯怀孕相关文本 [@issue/184][issue184]
 >   - 修复了一些其他已知问题
 >   - 汉化了部分已知未汉化文本
@@ -539,6 +546,10 @@
 [issue176]: https://github.com/Eltirosto/Degrees-of-Lewdity-Chinese-Localization/issues/176
 [issue178]: https://github.com/Eltirosto/Degrees-of-Lewdity-Chinese-Localization/issues/178
 [issue181]: https://github.com/Eltirosto/Degrees-of-Lewdity-Chinese-Localization/issues/181
+[issue183]: https://github.com/Eltirosto/Degrees-of-Lewdity-Chinese-Localization/issues/183
 [issue184]: https://github.com/Eltirosto/Degrees-of-Lewdity-Chinese-Localization/issues/184
 [issue186]: https://github.com/Eltirosto/Degrees-of-Lewdity-Chinese-Localization/issues/186
 [issue187]: https://github.com/Eltirosto/Degrees-of-Lewdity-Chinese-Localization/issues/187
+[issue189]: https://github.com/Eltirosto/Degrees-of-Lewdity-Chinese-Localization/issues/189
+[issue190]: https://github.com/Eltirosto/Degrees-of-Lewdity-Chinese-Localization/issues/190
+[issue191]: https://github.com/Eltirosto/Degrees-of-Lewdity-Chinese-Localization/issues/191
