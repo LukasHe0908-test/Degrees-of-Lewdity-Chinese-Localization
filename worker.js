@@ -9,7 +9,7 @@ const file = fs
 // console.log(file);
 
 const cspMetaRegex = /<meta[^\<]*?["']Content-Security-Policy["'][^\>]*?>/is;
-const insertRegex = /idbToggleLabel.appendChild\(idbToggle\);/i;
+const insertRegex = /list.append[^\n]+idbToggleLabel[^\n]+\n/is;
 const insertRegex_already =
   /\/\/ start-mark-c0e8ccb0(.*)\/\/ end-mark-c0e8ccb0(\n*)/is;
 

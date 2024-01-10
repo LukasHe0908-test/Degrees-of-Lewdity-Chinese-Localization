@@ -103,7 +103,7 @@
   <div class="savesList"></div>
 </div>
 `;
-  idbToggleLabel.append(ele.firstElementChild);
+  list.append(ele.firstElementChild);
 
   window.c0e8ccb0_getlist = c0e8ccb0_getlist;
   window.c0e8ccb0_redrawList = c0e8ccb0_redrawList;
