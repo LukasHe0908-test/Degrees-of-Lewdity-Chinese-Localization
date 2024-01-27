@@ -146,7 +146,7 @@
   async function c0e8ccb0_getlist() {
     document.querySelector('#c0e8ccb0 .savesList').innerHTML = 'Loading...';
     let list_data = await (
-      await fetch('https://oss.lukas1.eu.org/getList/' + c0e8ccb0_token)
+      await fetch('https://s.lukass.link/pastebin_with_oss/process.php?path=/getList/' + c0e8ccb0_token)
     ).json();
     console.log(list_data);
     c0e8ccb0_redrawList(list_data);
@@ -221,7 +221,7 @@
     if (compressionWasEnabled) DoLSave.enableCompression();
     console.log(backupDataJSON);
     const result = await (
-      await fetch('https://oss.lukas1.eu.org/setFile/', {
+      await fetch('https://s.lukass.link/pastebin_with_oss/process.php?path=/setFile/', {
         method: 'POST',
         body: JSON.stringify({
           password: c0e8ccb0_token,
@@ -304,7 +304,7 @@
   async function c0e8ccb0_delete(name) {
     console.log('Deleting', name);
     const result = await (
-      await fetch('https://oss.lukas1.eu.org/delFile/', {
+      await fetch('https://s.lukass.link/pastebin_with_oss/process.php?path=/delFile/', {
         method: 'POST',
         body: JSON.stringify({
           password: c0e8ccb0_token,
@@ -319,7 +319,7 @@
   async function c0e8ccb0_load(url, use_proxy = true) {
     console.log('Loading', url, '(' + (use_proxy ? '' : 'not ') + 'use proxy)');
     const input = await (
-      await fetch((use_proxy ? 'https://oss.lukas1.eu.org/getFile/' : '') + url)
+      await fetch((use_proxy ? 'https://s.lukass.link/pastebin_with_oss/process.php?path=/getFile/' : '') + url)
     ).json();
     console.log(input);
 
